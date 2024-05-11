@@ -1,3 +1,6 @@
+using COMP003B.Assignment7.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace COMP003B.Assignment7
 {
     public class Program
@@ -8,6 +11,8 @@ namespace COMP003B.Assignment7
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddDbContext<WebActorMovieContext>(options => options.UseSqlServer("Name=ConnectionStrings:DefaultConnection"));
 
             var app = builder.Build();
 

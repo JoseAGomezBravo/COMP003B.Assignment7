@@ -10,6 +10,8 @@ namespace COMP003B.Assignment7.Models
         [Required]
         public string MovieName { get; set;}
 
+        public virtual ICollection<MovieActor>? MovieActors { get; set; }
+
 
         
     }
